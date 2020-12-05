@@ -8,10 +8,7 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: https://github.com/Ventu012/P1_FindingLaneLines/blob/main/examples/line-segments-example.jpg "Grayscale"
+![Grayscale](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/examples/line-segments-example.jpg)
 
 ---
 
