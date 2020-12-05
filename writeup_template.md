@@ -19,6 +19,7 @@ The goals / steps of this project are the following:
 My pipeline consisted of 5 steps:
 1. Convert the images to grayscale
 ![Grayscale](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_gray.jpg =960x540)
+<img src="https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_gray.jpg" width="960" />
 
 2. Apply Gaussuan Blur to smooth the images
 ![Gaussian Blur](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_blur_gray.jpg)
