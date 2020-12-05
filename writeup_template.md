@@ -8,7 +8,7 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-![Grayscale](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/examples/line-segments-example.jpg)
+![Introduction](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/examples/line-segments-example.jpg)
 
 ---
 
@@ -18,15 +18,20 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps:
 1. Convert the images to grayscale
-[image2]: ./test_images_output/solidWhiteCurve_gray.jpg "Grayscale"
+![Grayscale](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_gray.jpg)
+
 2. Apply Gaussuan Blur to smooth the images
-[image3]: ./test_images_output/solidWhiteCurve_blur_gray.jpg "Gaussian Blur"
+![Gaussian Blur](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_blur_gray.jpg)
+
 3. Perform edge detection
-[image4]: ./test_images_output/solidWhiteCurve_edges.jpg "Canny"
+![Canny Edges](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_edges.jpg)
+
 4. Find the region of interest in order to focus only on the part of the images where lane lines are more likely to be
-[image5]: ./test_images_output/solidWhiteCurve_masked_edges.jpg "Region of interest"
+![Region of Interest](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_masked_edges.jpg)
+
 5. From the points detected in the edge detection step, masked by the region of interest, find continuous lane lines.
-[image6]: ./test_images_output/solidWhiteCurve_output.jpg "Lane Lines"
+![Lane Lines](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_masked_edges.jpg)
+
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by:
 1. computing the slope and intercept for each line
