@@ -16,15 +16,15 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Pipeline Description and draw_lines() Function
 
 My pipeline consisted of 5 steps:
-1. Convert the images to grayscale
+1. Convert of input images to grayscale
 <div align="center">
     <img src="https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_gray.jpg" width="500" />
 </div>
 
-2. Apply Gaussuan Blur to smooth the images
+2. Apply Gaussian Blur to smooth the images
 <div align="center">
     <img src="https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_blur_gray.jpg" width="500" />
 </div>
@@ -44,24 +44,31 @@ My pipeline consisted of 5 steps:
     <img src="https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_output.jpg" width="500" />
 </div>
 
+
+---
+
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by:
-1. computing the slope and intercept for each line
-2. dividing the lines into two groups: lines with positive slope and lines with negative slope
-3. computing the average slope and intercept for each of the two group of lines
-4. using the avg slope and intercept computed in the previous step reconstruct the two lines
+1. Computing the slope and intercept for each line
+2. Dividing the lines into two groups: lines with positive slope and lines with negative slope
+3. Computing the average slope and average intercept for each of the two groups of lines. This is done considering only lines with length greater than 80 and a slope, in absolute value, between 0.5 and 0.8
+4. Using the average slope and intercept computed in the previous step reconstruct the two lines (left and right)
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings of the current pipeline
 
 
-One potential shortcoming would be what would happen when the road is not straight but turns to the left or the right, or even during a change in the slope of the road (uphill/downhill). Using a first grade equation (y=mx+b) to derive the lane lines, even a small curve in the lanes could lead to missinterpretaions.
+A potential flaw could be what would happen when the road is not straight but turns left or right, or even when a slope change (uphill / downhill) occurs. Using a first degree equation (y = mx + b) to derive lane lines, even a small curve in the lanes could lead to misinterpretations.
 
-Another potential shortcoming would be extracting a region of interest from original images using fixed parameters. This could lead to filter out the lane lines that we are trying to detect when the road changes its shape. 
+Another potential flaw would be the extraction of a region of interest from the original images using fixed parameters. This could lead to filtering out the lane lines we are trying to detect when the road changes shape.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements for the current pipeline
 
-A possible improvement to the detection of curve lane lines could be to use an higher grade equation to derive the lane lines. 
-But this could lead to worsen the performance of the pipeline. The final goal would be to find the right tradeoff between accuracy and performance.
+A possible improvement in detecting curved lane lines could be the use of a higher degree equation to compute lane lines.
+But this could lead to poor pipeline performance.
+The ultimate goal would be to find the right compromise between precision and performance.
 
-In the case of the fixed parameter a possible improvement could be to use 
+In the case of the region of interest computed using fixed parameters, a possible improvement could be to use variable parameters computed at each step based on the lane line calculated in the previous steps. 
+In this way we could detect a change in the shape of the lane lines and adjust the region of interest accordingly.
+
+
