@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: https://github.com/Ventu012/P1_FindingLaneLines/blob/main/examples/line-segments-example.jpg "Grayscale"
 
 ---
 
