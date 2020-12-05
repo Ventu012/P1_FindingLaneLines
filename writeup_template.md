@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps:
 1. Convert the images to grayscale
-![Grayscale](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_gray.jpg)
+![Grayscale](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_gray.jpg =960x540)
 
 2. Apply Gaussuan Blur to smooth the images
 ![Gaussian Blur](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_blur_gray.jpg)
@@ -30,7 +30,7 @@ My pipeline consisted of 5 steps:
 ![Region of Interest](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_masked_edges.jpg)
 
 5. From the points detected in the edge detection step, masked by the region of interest, find continuous lane lines.
-![Lane Lines](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_masked_edges.jpg)
+![Lane Lines](https://github.com/Ventu012/P1_FindingLaneLines/blob/main/test_images_output/solidWhiteCurve_output.jpg)
 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by:
